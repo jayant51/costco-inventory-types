@@ -1,0 +1,54 @@
+swagger: '2.0'
+info:
+  title: costco-sales
+  version: 0.0.1
+  description: costco-sales
+  x-ibm-name: costco-sales
+paths:
+  /init:
+    get:
+      description: costco-sales types app
+      operationId: sales
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "Success"
+        "405":
+          description: "Invalid input"
+        "404":
+          description: "Not Found"
+    post:
+      description: costco-sales types app
+      operationId: create
+      consumes:
+      - "application/text"
+      produces:
+      - "application/text"
+      responses:
+        "200":
+          description: "Success"
+  /listSales:
+    get:
+      operationId: listSales
+      responses:
+        '200':
+          description: The operation was successful.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      description: List costco-sales
+schemes:
+  - http
+x-ibm-configuration:
+  type: rest
+  phase: realized
+  enforced: true
+  testable: true
+  cors:
+    enabled: true
+host: costco-sales-orders-git-openshift.itzroks-663002b1mb-xbphnt-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud
+
