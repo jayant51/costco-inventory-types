@@ -1,1 +1,1 @@
-# costco-sales
+# costco-inventory-types
